@@ -1,3 +1,5 @@
+package com.bibliotech.model
+
 public interface Socio {
     int socioId();
     int dni();

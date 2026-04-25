@@ -1,1 +1,3 @@
-public record Ebook(String isbn, String titulo, String autor, int paginas, int ano, string categorias) implements Recurso {}
+package com.bibliotech.model
+
+public record Ebook(String isbn, String titulo, String autor, int paginas, int ano, String categoria) implements Recurso {}

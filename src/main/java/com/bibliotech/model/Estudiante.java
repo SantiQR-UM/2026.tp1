@@ -1,6 +1,9 @@
-public record Estudiante(int socioId(), int dni(), String nombre(), String email()) implements Socio {}
+package com.bibliotech.model
 
-@Override
-public int prestamosMax() {
-    return 3;
+public record Estudiante(int socioId(), int dni(), String nombre(), String email()) implements Socio {
+
+    @Override
+    public int prestamosMax () {
+        return 3;
+    }
 }
