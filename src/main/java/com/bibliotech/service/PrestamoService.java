@@ -1,3 +1,5 @@
+package com.bibliotech.service;
+
 // src/com/bibliotech/service/PrestamoService.java
 public class PrestamoService {
     private final Repository<Libro, String> libroRepo;
