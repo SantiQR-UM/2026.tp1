@@ -1,4 +1,4 @@
-package com.bibliotech.model
+package com.bibliotech.model;
 
 public interface Socio {
     int socioId();
@@ -6,4 +6,5 @@ public interface Socio {
     String nombre();
     String email();
     int prestamosMax();
+
 }
