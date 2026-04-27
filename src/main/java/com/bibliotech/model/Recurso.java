@@ -8,5 +8,6 @@ public interface Recurso {
     int paginas();
     int ano();
     String categoria();
+    boolean esPrestable();
 }
 
