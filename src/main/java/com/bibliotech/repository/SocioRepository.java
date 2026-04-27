@@ -18,7 +18,7 @@ public class SocioRepository implements Repository<Socio, Integer> {
     }
 
     @Override
-    public Optional<Socio> buscarPorId(Integer socioId) {
+    public Optional<Socio> buscarPorId(int socioId) {
         return Optional.ofNullable(storage.get(socioId));
     }
 
@@ -27,13 +27,13 @@ public class SocioRepository implements Repository<Socio, Integer> {
         return new ArrayList<>(storage.values());
     }
 
-    public Optional<Socio> buscarNombre(String nombre) {
+    public List<Socio> buscarPorNombre(String nombre) {
         return storage.values().stream()
-                .filter(socio -> socio.nombre().equals(nombre))
-                .findFirst();
+                .filter(socio -> socio.nombre().equalsIgnoreCase(nombre))
+                .toList();
     }
 
-    public Optional<Socio> buscarDni(Integer dni) {
+    public Optional<Socio> buscarDni(int dni) {
         return storage.values().stream()
                 .filter(socio -> socio.dni() == dni)
                 .findFirst();
@@ -41,7 +41,7 @@ public class SocioRepository implements Repository<Socio, Integer> {
 
     public Optional<Socio> buscarEmail(String email) {
         return storage.values().stream()
-                .filter(socio -> socio.email().equals(email))
+                .filter(socio -> socio.email().equalsIgnoreCase(email))
                 .findFirst();
     }
 }
