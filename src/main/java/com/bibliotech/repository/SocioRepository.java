@@ -29,7 +29,7 @@ public class SocioRepository implements Repository<Socio, Integer> {
 
     public List<Socio> buscarPorNombre(String nombre) {
         return storage.values().stream()
-                .filter(socio -> socio.nombre().equalsIgnoreCase(nombre))
+                .filter(socio -> socio.nombre().toLowerCase().contains(nombre.toLowerCase()))
                 .toList();
     }
 
