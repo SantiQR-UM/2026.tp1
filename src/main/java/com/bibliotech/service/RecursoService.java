@@ -46,6 +46,10 @@ public class RecursoService {
         return ((RecursoRepository)recursoRepo).buscarPorCategoria(categoria);
     }
 
+    public List<Recurso> buscarPorAno(int ano) {
+        return ((RecursoRepository)recursoRepo).buscarPorAno(ano);
+    }
+
     public boolean estaDisponible(String isbn) {
         List<Prestamo> prestamosActivos = ((PrestamoRepository)prestamoRepo).buscarPrestamosActivosPorRecurso(isbn);
         // Si la lista está vacía, está disponible

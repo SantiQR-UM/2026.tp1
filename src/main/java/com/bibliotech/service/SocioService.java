@@ -38,8 +38,8 @@ public class SocioService {
         return ((SocioRepository)socioRepo).buscarDni(dni);
     }
 
-    public Optional<Socio> buscarPorNombre(String nombre) {
-        return ((SocioRepository)socioRepo).buscarNombre(nombre);
+    public List<Socio> buscarPorNombre(String nombre) {
+        return ((SocioRepository)socioRepo).buscarPorNombre(nombre);
     }
 
     public List<Socio> buscarTodos() {
