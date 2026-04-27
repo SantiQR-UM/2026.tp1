@@ -13,4 +13,9 @@ public record Libro(String isbn, String titulo, String autor, int paginas, int a
         if (categoria == null || categoria.isEmpty()) {throw new DatoInvalidoException("La categoría no puede estar vacía");}
     }
 
+    @Override
+    public boolean esPrestable() {
+        return true;
+    }
+
 }
