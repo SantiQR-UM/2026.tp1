@@ -18,7 +18,7 @@ public class SocioRepository implements Repository<Socio, Integer> {
     }
 
     @Override
-    public Optional<Socio> buscarPorId(int socioId) {
+    public Optional<Socio> buscarPorId(Integer socioId) {
         return Optional.ofNullable(storage.get(socioId));
     }
 

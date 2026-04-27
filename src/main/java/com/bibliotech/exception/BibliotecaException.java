@@ -1,6 +1,6 @@
 package com.bibliotech.exception;
 
-public class BibliotecaException extends Exception {
+public class BibliotecaException extends RuntimeException {
 
     // Constructor que recibe un mensaje
     public BibliotecaException(String mensaje) {
